@@ -1,0 +1,54 @@
+/* .User {} */
+
+.User__header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.User__image {
+  margin: 0 20px 10px 0;
+  background-image: url('https://placeimg.com/80/80/animals');
+  background-color: #fff;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.User__name {
+  font-size: 36px;
+}
+
+.User__fieldName {
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 26px;
+  display: flex;
+}
+
+.User__delButton {
+  /* border: none;
+  transition: .4s opacity;
+  margin-left: 10px;
+  font-size: 13px;
+  outline: none;
+  padding: 2px 5px; */
+  margin-left: 10px;
+  opacity: .45;
+  /* background: red;
+  color: #fff; */
+  /* height: 22px; */
+  /* box-shadow: 2px 2px 1px 0px #bebebe; */
+}
+
+.User__field span:first-child {
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 140px;
+  opacity: .6;
+}
+
+.User__field span:last-child:empty:after {
+  content: '---';
+}

@@ -1,0 +1,9 @@
+.UserAddAddress__error {
+  margin: 7px 0;
+  color: red;
+}
+
+.UserAddAddress__saveButton {
+  margin-top: 20px;
+  float: right;
+}

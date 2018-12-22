@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+  height: 100vh;
+}
+
+.App__box {
+  box-shadow: 4px 8px 14px 0px #ccc;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 6px;
+  max-width: 95%;
+  padding: 40px;
+  width: 750px;
+  color: #313131;
+}

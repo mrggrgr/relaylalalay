@@ -1,0 +1,71 @@
+input AddAddressToUserInput {
+  userId: ID!
+  postalCode: String!
+  country: String!
+  region: String!
+  area: String
+  locality: String!
+  street: String
+  house: String
+  block: String
+  flat: String
+  clientMutationId: String
+}
+
+type AddAddressToUserPayload {
+  address: Address!
+  user: User!
+  clientMutationId: String
+}
+
+type Address implements Node {
+  """The ID of an object"""
+  id: ID!
+  postalCode: String!
+  country: String!
+  region: String!
+  area: String
+  locality: String!
+  street: String
+  house: String
+  block: String
+  flat: String
+}
+
+type Mutation {
+  addAddressToUser(input: AddAddressToUserInput!): AddAddressToUserPayload
+  removeAddressFromUser(input: RemoveAddressFromUserInput!): RemoveAddressFromUserPayload
+}
+
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+type Query {
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
+}
+
+input RemoveAddressFromUserInput {
+  userId: ID!
+  addressId: ID!
+  clientMutationId: String
+}
+
+type RemoveAddressFromUserPayload {
+  addressId: ID!
+  user: User!
+  clientMutationId: String
+}
+
+type User implements Node {
+  """The ID of an object"""
+  id: ID!
+  name: String!
+  address: Address
+}
